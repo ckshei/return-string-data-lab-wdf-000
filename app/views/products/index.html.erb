@@ -18,7 +18,7 @@
       });
       $.get("/products/" + id + "/inventory", function(data) {
         debugger
-      if(data === "true"){
+      if(data == "true"){
      $("#body-inv"+id).html("Available")
       } else {
      $("#body-inv"+id).html("Sold Out")
