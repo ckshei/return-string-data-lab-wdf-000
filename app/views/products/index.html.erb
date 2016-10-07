@@ -17,10 +17,11 @@
      $("#body-"+id).append(data)
       });
       $.get("/products/" + id + "/inventory", function(data) {
-      if(data){
-     $("#body-inv"+id).append("Available")
+        debugger
+      if(data === "true"){
+     $("#body-inv"+id).html("Available")
       } else {
-     $("#body-inv"+id).append("Sold Out")
+     $("#body-inv"+id).html("Sold Out")
       }
       })
       });
